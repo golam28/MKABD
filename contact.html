@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | M. Khaled Ahmed & Associates</title>
+  <meta name="description" content="Contact M. Khaled Ahmed & Associates — Suite 207, Shajan Tower 2, Shegunbagicha, and Chamber 3016, Supreme Court Annexe, Dhaka."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="logo.png" alt="M. Khaled Ahmed & Associates" class="nav-logo" width="180" height="99"/></a>
+    <nav class="primary" aria-label="Primary">
+      <a href="about.html">About</a>
+      <a href="chambers.html">Chambers</a>
+      <a href="practice.html">Practice</a>
+      <a href="contact.html" class="nav-cta" aria-current="page">Contact</a>
+    </nav>
+    <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+  </header>
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="chambers.html">Chambers</a>
+    <a href="practice.html">Practice</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </div>
+
+  <main>
+    <div class="page-banner">
+      <p class="section-label">Get in touch</p>
+      <h1 class="page-title">Consult with <em>our team</em></h1>
+      <p class="lead">Fill in the form and your inquiry will be delivered to our inbox. All communications are treated with strict confidentiality.</p>
+    </div>
+
+    <section class="section" style="background: var(--cream-dark);">
+      <div class="contact-grid">
+        <div>
+          <div class="contact-details" style="margin-top: 0;">
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-info">
+                <p>Chamber address</p>
+                <span>Suite 207, Shajan Tower 2<br>Shegunbagicha, Dhaka 1205<br>(Opposite Birdem-2 Hospital)</span>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-info">
+                <p>Court chamber</p>
+                <span>Chamber 3016, Annexe Building<br>Supreme Court, Dhaka 1205</span>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+              </div>
+              <div class="contact-info">
+                <p>Email</p>
+                <a href="mailto:chamber3016@gmail.com">chamber3016@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="return submitForm(event)">
+          <div class="form-row">
+            <input id="f-name" type="text" placeholder="Full name" required autocomplete="name" />
+            <input id="f-email" type="email" placeholder="Email" required autocomplete="email" />
+          </div>
+          <div class="form-row">
+            <input id="f-phone" type="tel" placeholder="Telephone (optional)" autocomplete="tel" />
+            <select id="f-area" onchange="this.classList.toggle('filled', !!this.value)">
+              <option value="">Select practice area</option>
+              <option>Supreme Court Appearances</option>
+              <option>Writ / PIL Matters</option>
+              <option>Civil Litigation</option>
+              <option>Criminal Defense</option>
+              <option>Company &amp; Commercial Law</option>
+              <option>Immigration Matters</option>
+              <option>CPLA / CMP Matters</option>
+              <option>Income Tax Matters</option>
+              <option>Banking &amp; Finance</option>
+              <option>ADR / Arbitration</option>
+              <option>Intellectual Property</option>
+              <option>Labour &amp; Employment</option>
+              <option>Admiralty Law</option>
+              <option>Family Matters</option>
+              <option>Documentation &amp; Drafting</option>
+              <option>Corporate Consulting</option>
+              <option>General Legal Advisory</option>
+            </select>
+          </div>
+          <textarea id="f-message" placeholder="Brief description of your matter" required></textarea>
+          <div class="form-note">Your inquiry is sent to the chamber’s inbox. Please do not include documents that are privileged against a third party in this first message.</div>
+          <button type="submit" class="btn-primary" id="submitBtn">Send inquiry</button>
+          <div class="form-status" id="formStatus" role="status"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <img src="logo-light.png" alt="M. Khaled Ahmed & Associates" class="footer-logo-img" width="160" height="88"/>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="chambers.html">Chambers</a>
+        <a href="practice.html">Practice</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 M. Khaled Ahmed &amp; Associates. All rights reserved. | Est. 1986, Dhaka</div>
+      <div class="footer-address">
+        Suite 207, Shajan Tower 2, Shegunbagicha, Dhaka 1205<br>
+        chamber3016@gmail.com
+      </div>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
